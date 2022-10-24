@@ -12,4 +12,5 @@ Run _**noelle.exe**_ for a preconfigured demo with some functions.
 > - open discord
 > - the time
 > - something in the wikipedia
-> - send emails~
+> - send emails
+> - open code
