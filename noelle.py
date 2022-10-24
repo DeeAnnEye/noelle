@@ -4,6 +4,7 @@ import datetime
 import wikipedia
 import webbrowser
 import pyaudio
+import pyjokes
 import os
 import smtplib
 
@@ -109,10 +110,20 @@ if __name__ == "__main__":
         elif "do you have a boyfriend" in query:
             speak("I'm in love with the wifi")
 
+        elif 'joke' in query:
+            speak(pyjokes.get_joke())
+
         elif "who are you" in query:
             speak("I am your virtual assistant created by Daniela")
+        
+        elif "what is your name" in query or "your name" in query:
+            speak("I'm Noelle. Your personal assistant")
+        
+        elif "noelle" in query:
+            wishMe()
 
         elif 'open spotify' in query:
+            speak("opening spotify")
             for r, d, f in os.walk('c:\\'):
                 for file in f:
                     if file.endswith("Spotify.exe"):
@@ -122,6 +133,7 @@ if __name__ == "__main__":
             os.startfile(codePath)
 
         elif 'open discord' in query:
+            speak("opening discord")
             for r, d, f in os.walk('c:\\'):
                 for file in f:
                     if file.endswith("Discord.exe"):
@@ -135,6 +147,7 @@ if __name__ == "__main__":
             speak(f"the time is {strTime}")
 
         elif 'open code' in query:
+            speak("opening code")
             for r, d, f in os.walk('c:\\'):
                 for file in f:
                     if file.endswith("Code.exe"):
