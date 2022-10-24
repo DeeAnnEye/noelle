@@ -61,6 +61,8 @@ def sendEmail(to, content):
 
 if __name__ == "__main__":
     wishMe()
+
+    
     chrome_path = "C://Program Files//Google//Chrome//Application//Chrome.exe %s"
     while True:
     # if 1:
@@ -85,7 +87,11 @@ if __name__ == "__main__":
 
         elif 'open stack overflow' in query:
             speak("opening stack overflow")
-            webbrowser.get(chrome_path).open("stackoverflow.com")   
+            webbrowser.get(chrome_path).open("stackoverflow.com") 
+
+        elif 'open reddit' in query:
+            speak("opening reddit")
+            webbrowser.get(chrome_path).open("reddit.com")  
 
         elif 'how are you' in query:
             speak("I am fine, Thank you")
@@ -107,7 +113,21 @@ if __name__ == "__main__":
             speak("I am your virtual assistant created by Daniela")
 
         elif 'open spotify' in query:
-            codePath = "C:\\Users\\danie\\AppData\\Roaming\\Spotify\\Spotify.exe"
+            for r, d, f in os.walk('c:\\'):
+                for file in f:
+                    if file.endswith("Spotify.exe"):
+                        path_file = os.path.join(r,file)
+                        codePath = path_file.replace('\\', '\\\\')
+                       
+            os.startfile(codePath)
+
+        elif 'open discord' in query:
+            for r, d, f in os.walk('c:\\'):
+                for file in f:
+                    if file.endswith("Discord.exe"):
+                        path_file = os.path.join(r,file)
+                        codePath = path_file.replace('\\', '\\\\')
+
             os.startfile(codePath)
 
         elif 'the time' in query:
@@ -115,7 +135,12 @@ if __name__ == "__main__":
             speak(f"the time is {strTime}")
 
         elif 'open code' in query:
-            codePath = "C:\\Program Files\\Microsoft VS Code\\Code.exe"
+            for r, d, f in os.walk('c:\\'):
+                for file in f:
+                    if file.endswith("Code.exe"):
+                        path_file = os.path.join(r,file)
+                        codePath = path_file.replace('\\', '\\\\')
+
             os.startfile(codePath)
 
         elif 'send email' in query:
