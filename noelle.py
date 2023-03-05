@@ -124,22 +124,24 @@ if __name__ == "__main__":
 
         elif 'open spotify' in query:
             speak("opening spotify")
-            for r, d, f in os.walk('c:\\'):
-                for file in f:
-                    if file.endswith("Spotify.exe"):
-                        path_file = os.path.join(r,file)
-                        codePath = path_file.replace('\\', '\\\\')
+            # for r, d, f in os.walk('c:\\'):
+            #     for file in f:
+            #         if file.endswith("Spotify.exe"):
+            #             path_file = os.path.join(r,file)
+            #             codePath = path_file.replace('\\', '\\\\')
+
+            codePath = "C:\\Users\\danie\\AppData\\Roaming\\Spotify\\Spotify.exe"
                        
             os.startfile(codePath)
 
         elif 'open discord' in query:
             speak("opening discord")
-            for r, d, f in os.walk('c:\\'):
-                for file in f:
-                    if file.endswith("Discord.exe"):
-                        path_file = os.path.join(r,file)
-                        codePath = path_file.replace('\\', '\\\\')
-
+            # for r, d, f in os.walk('c:\\'):
+            #     for file in f: 
+            #         if file.endswith("Discord.exe"):
+            #             path_file = os.path.join(r,file)
+            #             codePath = path_file.replace('\\', '\\\\')
+            codePath = "C:\\Users\\danie\\AppData\\Local\\Discord\\app-1.0.9011\\Discord.exe"
             os.startfile(codePath)
 
         elif 'the time' in query:
@@ -148,11 +150,12 @@ if __name__ == "__main__":
 
         elif 'open code' in query:
             speak("opening code")
-            for r, d, f in os.walk('c:\\'):
-                for file in f:
-                    if file.endswith("Code.exe"):
-                        path_file = os.path.join(r,file)
-                        codePath = path_file.replace('\\', '\\\\')
+            # for r, d, f in os.walk('c:\\'):
+            #     for file in f:
+            #         if file.endswith("Code.exe"):
+            #             path_file = os.path.join(r,file)
+            #             codePath = path_file.replace('\\', '\\\\')
+            codePath = "C:\\Program Files\\Microsoft VS Code\\Code.exe"
 
             os.startfile(codePath)
 
